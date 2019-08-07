@@ -12,5 +12,5 @@ jobs:
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
             echo 'hi man'
-          - store_test_results:
-              path: test-results
+      - store_test_results:
+          path: test-results
