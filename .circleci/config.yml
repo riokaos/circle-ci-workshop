@@ -13,4 +13,4 @@ jobs:
             echo 'This is the delivery pipeline'
             echo 'hi man'
       - store_test_results:
-          path: test-results
+          path: build/test-results
