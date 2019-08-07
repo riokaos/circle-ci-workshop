@@ -11,7 +11,7 @@ public class GildedRoseTest {
         Item[] items = new Item[] { new Item("foo", 0, 0) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals("foo", app.items[0].name);
+        assertEquals("foo2", app.items[0].name);
     }
     @Test
     public void old_brie() {
@@ -19,7 +19,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertTrue("brie is a higher quality",app.items[0].quality>1 );
-        
+
     }
     @Test
     public void never_over_50() {
@@ -27,6 +27,6 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertTrue("brie is higher quality than it should be able to",app.items[0].quality==50 );
-        
+
     }
 }
