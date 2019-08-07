@@ -9,6 +9,7 @@ jobs:
           name: The First Step
           command: |
             gradle test
+            gradle jar
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
             echo 'hi man'
@@ -16,4 +17,7 @@ jobs:
           path: build/test-results
       - store_artifacts:
           path: /code/test-results
+          destination: prefix
+      - store_artifacts:
+          path: build/libs
           destination: prefix
